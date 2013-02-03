@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Feed API -->
+    <string name="feed_api">http://careers.stackoverflow.com/de/jobs/feed</string>
+    
+    <!-- Activities -->
+    <string name="header_left">Stack</string>
+    <string name="header_right">Careers</string>
+    <string name="app_name">Stack Careers</string>
+    <string name="app_description">Finde deinen Traumjob durch Durchsuchen der Stackoverflow Karriere Inserate.</string>
+    <string name="search_results">Suchergebnisse</string>
+    <string name="job_listing">Stellenanzeige</string>
+
+    <!-- UI elements -->
+    <string name="skill_hint">geben Fähigkeiten</string>
+    <string name="location_hint">Geben Stadt.</string>
+    <string name="search_button_label">suchen</string>
+    <string name="reset_button_label">Von vorn anfangen</string>
+    <string name="loading">Ergebnisse werden geladen &#8230;</string>
+    <string name="posted_on">Geschrieben am</string>
+    <string name="last_updated">Zuletzt aktualisiert</string>
+    <string name="web_link">Weblink:</string>
+    <string name="share_job">Teilen Sie diese job</string>
+    <string name="share_blurb">Blick auf diese Aufgabe von StackCareers auf Android</string>
+    <string name="description_label">Beschreibung</string>
+
+</resources>

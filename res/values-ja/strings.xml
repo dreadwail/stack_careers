@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Feed API -->
+    <string name="feed_api">http://careers.stackoverflow.com/jobs/feed</string>
+    
+    <!-- Activities -->
+    <string name="header_left">Stack</string>
+    <string name="header_right">Careers</string>
+    <string name="app_name">Stack Careers</string>
+    <string name="app_description">stackoverflowのキャリアのリストを検索することによって、あなたの夢の仕事を見つける。</string>
+    <string name="search_results">検索結果</string>
+    <string name="job_listing">求人情報</string>
+
+    <!-- UI elements -->
+    <string name="skill_hint">スキル（複数可）を入力します。例：Javaの</string>
+    <string name="location_hint">都市の名前を入力します。例：シアトル</string>
+    <string name="search_button_label">検索</string>
+    <string name="reset_button_label">やり直し</string>
+    <string name="loading">ロード結果&#8230;</string>
+    <string name="posted_on">投稿日：</string>
+    <string name="last_updated">最終更新日：</string>
+    <string name="web_link">Webリンク：</string>
+    <string name="share_job">この求人を</string>
+    <string name="share_blurb">：この仕事を（Android用StackCareers経由）チェックアウト</string>
+    <string name="description_label">説明</string>
+
+</resources>
