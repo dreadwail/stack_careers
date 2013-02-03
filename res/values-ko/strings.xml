@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Feed API -->
+    <string name="feed_api">http://careers.stackoverflow.com/jobs/feed</string>
+    
+    <!-- Activities -->
+    <string name="header_left">Stack</string>
+    <string name="header_right">Careers</string>
+    <string name="app_name">Stack Careers</string>
+    <string name="app_description">Stackoverflow 채용 목록을 검색하여 꿈의 직업을 찾아보세요.</string>
+    <string name="search_results">검색 결과</string>
+    <string name="job_listing">작업 목록</string>
+
+    <!-- UI elements -->
+    <string name="skill_hint">기술 (들)을 입력합니다. 예 : 자바</string>
+    <string name="location_hint">도시를 입력하십시오. 예 : 시애틀</string>
+    <string name="search_button_label">검색</string>
+    <string name="reset_button_label">다시 시작</string>
+    <string name="loading">로드 결과&#8230;</string>
+    <string name="posted_on">에 게시 :</string>
+    <string name="last_updated">최종 업데이트 :</string>
+    <string name="web_link">웹 링크 :</string>
+    <string name="share_job">이 일을 공유</string>
+    <string name="share_blurb">:이 일을 (안드로이드 용 StackCareers를 통해) 확인</string>
+    <string name="description_label">기술</string>
+
+</resources>

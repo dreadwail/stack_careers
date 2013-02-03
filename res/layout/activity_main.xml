@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" 
+    tools:context=".MainActivity">
+    
+    <LinearLayout 
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" 
+        android:gravity="center_horizontal" 
+        android:orientation="horizontal">
+
+        <TextView 
+	        android:id="@+id/header_left"
+	        android:contentDescription="@string/app_name"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" 
+		    android:textSize="38sp" 
+		    android:textColor="#FB8008" 
+		    android:textStyle="bold"
+		    android:text="@string/header_left" />
+	    
+	    <TextView 
+	        android:id="@+id/header_right"
+	        android:contentDescription="@string/app_name"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="38sp" 
+		    android:textColor="#CCCCCC"
+		    android:text="@string/header_right" />
+        
+    </LinearLayout>
+
+    <EditText 
+        android:id="@+id/skill" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="40dp" 
+        android:contentDescription="@string/skill_hint"
+        android:hint="@string/skill_hint" 
+        android:focusable="true" 
+        android:nextFocusDown="@+id/location" 
+        android:nextFocusRight="@id/location" 
+        android:inputType="text" />
+
+    <EditText 
+        android:id="@id/location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/skill"
+        android:layout_toLeftOf="@+id/search_button"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/location_hint"
+        android:hint="@string/location_hint" 
+        android:focusable="true" 
+        android:nextFocusUp="@id/skill" 
+        android:nextFocusLeft="@id/skill" 
+        android:nextFocusDown="@id/search_button" 
+        android:nextFocusRight="@id/search_button"
+        android:inputType="text" />
+    
+    <Button 
+        android:id="@id/search_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/skill"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/search_button_label"
+        android:text="@string/search_button_label" 
+        android:onClick="executeSearch" 
+        android:focusable="true"
+        android:nextFocusUp="@id/location" 
+        android:nextFocusLeft="@id/location" />
+
+    <TextView 
+        android:id="@+id/description"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:gravity="center_horizontal"
+	    android:textSize="22sp" 
+	    android:textColor="#CCCCCC"
+	    android:layout_below="@id/search_button"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_margin="40dp" 
+	    android:contentDescription="@string/app_description" 
+	    android:text="@string/app_description" />
+    
+</RelativeLayout>

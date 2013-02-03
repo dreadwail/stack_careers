@@ -1,0 +1,67 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical" 
+    android:scrollbarAlwaysDrawVerticalTrack="true" >
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="25dp"
+	    android:orientation="vertical"
+	    tools:context=".JobListingActivity" >
+
+	    <TextView
+	        android:id="@+id/job_listing_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:textStyle="bold"
+	        android:textSize="22sp"
+	        android:layout_marginTop="10dp" />
+	    
+	    <TextView
+	        android:id="@+id/job_listing_uri"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:layout_marginTop="20dp" 
+	        android:focusable="true" 
+	        android:nextFocusRight="@+id/share_button" 
+	        android:nextFocusDown="@id/share_button" 
+	        android:textSize="18sp" />
+	    
+	    <TextView
+	        android:id="@+id/job_listing_postedtime"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" 
+	        android:layout_marginTop="10dp"
+	        android:textStyle="italic" 
+	        android:textColor="#555555" />
+	    
+	    <TextView
+	        android:id="@+id/job_listing_updatedtime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textStyle="italic" 
+	        android:textColor="#555555" />
+	    
+	    <Button 
+	        android:id="@id/share_button" 
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content"
+	        android:text="@string/share_job" 
+	        android:contentDescription="@string/share_job"
+	        android:onClick="share" 
+	        android:focusable="true" 
+	        android:nextFocusUp="@id/job_listing_uri" 
+	        android:nextFocusLeft="@id/job_listing_uri" />
+	    
+	    <TextView
+	        android:id="@+id/job_listing_description"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="20dp"
+	        android:textSize="18sp" />
+
+	    </LinearLayout>
+
+    </ScrollView>
