@@ -16,15 +16,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
-import java.net.URL;
-import java.util.Collections;
-import java.util.List;
-
 import android.util.Log;
 
 import com.benlakey.android.Connectivity;
@@ -33,6 +24,19 @@ import com.benlakey.stackcareers.JobListing;
 import com.benlakey.stackcareers.SearchQuery;
 import com.google.inject.Inject;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 public class HttpCareerFeedClient implements CareerFeedClient {
 
 	private static final int CONNECT_TIMEOUT_MILLIS = 7000;
@@ -40,6 +44,7 @@ public class HttpCareerFeedClient implements CareerFeedClient {
 
 	private final HttpSearchRequestBuilder requestBuilder;
 	private final HttpSearchResponseParser responseParser;
+	private final OkHttpClient client;
 
 	@Inject
 	public HttpCareerFeedClient(
@@ -47,18 +52,20 @@ public class HttpCareerFeedClient implements CareerFeedClient {
 			HttpSearchResponseParser responseParser) {
 		this.requestBuilder = requestBuilder;
 		this.responseParser = responseParser;
+		this.client = new OkHttpClient().newBuilder().connectTimeout(CONNECT_TIMEOUT_MILLIS, TimeUnit.MILLISECONDS)
+				.readTimeout(READ_TIMEOUT_MILLIS, TimeUnit.MILLISECONDS).build();
 		Connectivity.disableConnectionReuseIfNecessary();
 	}
 
 	@Override
 	public List<JobListing> search(SearchQuery query) {
 
-		URL url = this.constructURL(query);
-		if(url == null) {
+		Request request = this.constructURL(query);
+		if(request == null) {
 			return Collections.emptyList();
 		}
-		
-		InputStream inputStream = this.fetchData(url);
+
+		InputStream inputStream = this.fetchData(request);
 		if(inputStream == null) {
 			return Collections.emptyList();
 		}
@@ -66,35 +73,32 @@ public class HttpCareerFeedClient implements CareerFeedClient {
 		return this.responseParser.parse(inputStream);
 
 	}
-	
-	private URL constructURL(SearchQuery query) {
+
+	private Request constructURL(SearchQuery query) {
 		try {
-			return this.requestBuilder
-				.setLocation(query.getLocation())
-				.setSkill(query.getSkill())
-				.build();
+			URL url = this.requestBuilder
+					.setLocation(query.getLocation())
+					.setSkill(query.getSkill())
+					.build();
+			return new Request.Builder().url(url).get().build();
 		} catch (MalformedURLException e) {
 			Log.e(LogTag.ERROR_TAG, "URL couldn't be constructed for the query data.", e);
 			return null;
 		}
 	}
-	
-	private InputStream fetchData(URL url) {
+
+	private InputStream fetchData(Request request) {
 
 		try {
-			
-			HttpURLConnection connection = (HttpURLConnection)url.openConnection();
-			this.configureConnection(connection);
-			connection.connect();
-			
-			int responseCode = connection.getResponseCode();
-			if(responseCode != 200) {
+
+			Response response = client.newCall(request).execute();
+			if(response.code() != 200) {
 				Log.e(LogTag.ERROR_TAG, "Received a non-200 response from server.");
 				return null;
 			}
-			
-			return connection.getInputStream();
-			
+
+			return response.body().byteStream();
+
 		} catch (ProtocolException e) {
 			Log.e(LogTag.ERROR_TAG, "Unable to configure the feed HTTP client.", e);
 			return null;
@@ -103,13 +107,6 @@ public class HttpCareerFeedClient implements CareerFeedClient {
 			return null;
 		}
 
-	}
-	
-	private void configureConnection(HttpURLConnection connection) throws ProtocolException {
-		connection.setReadTimeout(CONNECT_TIMEOUT_MILLIS);
-		connection.setConnectTimeout(READ_TIMEOUT_MILLIS);
-		connection.setRequestMethod("GET");
-		connection.setDoInput(true);
 	}
 
 }

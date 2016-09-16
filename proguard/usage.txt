@@ -318,12 +318,8 @@ com.benlakey.stackcareers.JobListing:
     private static final long serialVersionUID
 com.benlakey.stackcareers.JobResultsActivity:
     private static final int SEARCH_RADIUS_MILES
-com.benlakey.stackcareers.MainActivity:
-    private static final java.lang.String BASE64_LICENSE_PUBLIC_KEY
-    private static final int MAX_LICENSE_RETRIES
 com.benlakey.stackcareers.R
 com.benlakey.stackcareers.R$attr
-com.benlakey.stackcareers.R$bool
 com.benlakey.stackcareers.R$drawable
 com.benlakey.stackcareers.R$id
 com.benlakey.stackcareers.R$layout
@@ -440,74 +436,206 @@ com.google.android.gms.analytics.internal.IAnalyticsService$Stub:
     private static final java.lang.String DESCRIPTOR
     static final int TRANSACTION_sendHit
     static final int TRANSACTION_clearHits
-com.google.android.vending.licensing.AESObfuscator:
-    private static final java.lang.String UTF8
-    private static final java.lang.String KEYGEN_ALGORITHM
-    private static final java.lang.String CIPHER_ALGORITHM
-    private static final java.lang.String header
-com.google.android.vending.licensing.APKExpansionPolicy
-com.google.android.vending.licensing.ILicenseResultListener$Stub:
-    private static final java.lang.String DESCRIPTOR
-    static final int TRANSACTION_verifyLicense
-com.google.android.vending.licensing.ILicensingService$Stub:
-    private static final java.lang.String DESCRIPTOR
-    static final int TRANSACTION_checkLicense
-com.google.android.vending.licensing.LicenseChecker:
-    private static final java.lang.String TAG
-    private static final java.lang.String KEY_FACTORY_ALGORITHM
-    private static final int TIMEOUT_MS
-    private static final boolean DEBUG_LICENSE_ERROR
-com.google.android.vending.licensing.LicenseChecker$ResultListener:
-    private static final int ERROR_CONTACTING_SERVER
-    private static final int ERROR_INVALID_PACKAGE_NAME
-    private static final int ERROR_NON_MATCHING_UID
-com.google.android.vending.licensing.LicenseCheckerCallback:
-    public static final int ERROR_INVALID_PACKAGE_NAME
-    public static final int ERROR_NON_MATCHING_UID
-    public static final int ERROR_NOT_MARKET_MANAGED
-    public static final int ERROR_CHECK_IN_PROGRESS
-    public static final int ERROR_INVALID_PUBLIC_KEY
-    public static final int ERROR_MISSING_PERMISSION
-com.google.android.vending.licensing.LicenseValidator:
-    private static final java.lang.String TAG
-    private static final int LICENSED
-    private static final int NOT_LICENSED
-    private static final int LICENSED_OLD_KEY
-    private static final int ERROR_NOT_MARKET_MANAGED
-    private static final int ERROR_SERVER_FAILURE
-    private static final int ERROR_OVER_QUOTA
-    private static final int ERROR_CONTACTING_SERVER
-    private static final int ERROR_INVALID_PACKAGE_NAME
-    private static final int ERROR_NON_MATCHING_UID
-    private static final java.lang.String SIGNATURE_ALGORITHM
-com.google.android.vending.licensing.Policy:
-    public static final int LICENSED
-    public static final int NOT_LICENSED
-    public static final int RETRY
-com.google.android.vending.licensing.PreferenceObfuscator:
-    private static final java.lang.String TAG
-com.google.android.vending.licensing.ServerManagedPolicy:
-    private static final java.lang.String TAG
-    private static final java.lang.String PREFS_FILE
-    private static final java.lang.String PREF_LAST_RESPONSE
-    private static final java.lang.String PREF_VALIDITY_TIMESTAMP
-    private static final java.lang.String PREF_RETRY_UNTIL
-    private static final java.lang.String PREF_MAX_RETRIES
-    private static final java.lang.String PREF_RETRY_COUNT
-    private static final java.lang.String DEFAULT_VALIDITY_TIMESTAMP
-    private static final java.lang.String DEFAULT_RETRY_UNTIL
-    private static final java.lang.String DEFAULT_MAX_RETRIES
-    private static final java.lang.String DEFAULT_RETRY_COUNT
-    private static final long MILLIS_PER_MINUTE
-com.google.android.vending.licensing.StrictPolicy
-com.google.android.vending.licensing.ValidationException:
+okhttp3.Cache:
+    private static final int VERSION
+    private static final int ENTRY_METADATA
+    private static final int ENTRY_BODY
+    private static final int ENTRY_COUNT
+okhttp3.Call$Factory
+okhttp3.CertificatePinner$Pin:
+    private static final java.lang.String WILDCARD
+okhttp3.Cookie:
+    77:91:private Cookie(okhttp3.Cookie$Builder)
+    43:43:synthetic Cookie(okhttp3.Cookie$Builder,okhttp3.Cookie$1)
+okhttp3.Cookie$1
+okhttp3.Cookie$Builder
+okhttp3.Credentials
+okhttp3.FormBody
+okhttp3.FormBody$1
+okhttp3.FormBody$Builder
+okhttp3.HttpUrl:
+    static final java.lang.String USERNAME_ENCODE_SET
+    static final java.lang.String PASSWORD_ENCODE_SET
+    static final java.lang.String PATH_SEGMENT_ENCODE_SET
+    static final java.lang.String PATH_SEGMENT_ENCODE_SET_URI
+    static final java.lang.String QUERY_ENCODE_SET
+    static final java.lang.String QUERY_COMPONENT_ENCODE_SET
+    static final java.lang.String QUERY_COMPONENT_ENCODE_SET_URI
+    static final java.lang.String FORM_ENCODE_SET
+    static final java.lang.String FRAGMENT_ENCODE_SET
+    static final java.lang.String FRAGMENT_ENCODE_SET_URI
+okhttp3.MediaType:
+    private static final java.lang.String TOKEN
+    private static final java.lang.String QUOTED
+okhttp3.MultipartBody
+okhttp3.MultipartBody$Builder
+okhttp3.MultipartBody$Part
+okhttp3.RealCall$AsyncCall:
+    110:110:okhttp3.Request request()
+okhttp3.internal.Util:
+    67:68:private Util()
+okhttp3.internal.Version:
+    23:24:private Version()
+okhttp3.internal.cache.DiskLruCache:
+    static final java.lang.String JOURNAL_FILE
+    static final java.lang.String JOURNAL_FILE_TEMP
+    static final java.lang.String JOURNAL_FILE_BACKUP
+    static final java.lang.String MAGIC
+    static final java.lang.String VERSION_1
+    static final long ANY_SEQUENCE_NUMBER
+    private static final java.lang.String CLEAN
+    private static final java.lang.String DIRTY
+    private static final java.lang.String REMOVE
+    private static final java.lang.String READ
+okhttp3.internal.framed.FramedConnection:
+    private static final int OKHTTP_CLIENT_WINDOW_SIZE
+okhttp3.internal.framed.FramedStream$FramedDataSink:
+    private static final long EMIT_BUFFER_SIZE
+okhttp3.internal.framed.Hpack:
+    private static final int PREFIX_4_BITS
+    private static final int PREFIX_5_BITS
+    private static final int PREFIX_6_BITS
+    private static final int PREFIX_7_BITS
+    111:112:private Hpack()
+okhttp3.internal.framed.Hpack$Reader:
+    141:141:int maxDynamicTableByteCount()
+okhttp3.internal.framed.Hpack$Writer:
+    private static final int SETTINGS_HEADER_TABLE_SIZE
+    private static final int SETTINGS_HEADER_TABLE_SIZE_LIMIT
+okhttp3.internal.framed.Http2:
+    static final int INITIAL_MAX_FRAME_SIZE
+    static final byte TYPE_DATA
+    static final byte TYPE_HEADERS
+    static final byte TYPE_PRIORITY
+    static final byte TYPE_RST_STREAM
+    static final byte TYPE_SETTINGS
+    static final byte TYPE_PUSH_PROMISE
+    static final byte TYPE_PING
+    static final byte TYPE_GOAWAY
+    static final byte TYPE_WINDOW_UPDATE
+    static final byte TYPE_CONTINUATION
+    static final byte FLAG_NONE
+    static final byte FLAG_ACK
+    static final byte FLAG_END_STREAM
+    static final byte FLAG_END_HEADERS
+    static final byte FLAG_END_PUSH_PROMISE
+    static final byte FLAG_PADDED
+    static final byte FLAG_PRIORITY
+    static final byte FLAG_COMPRESSED
+okhttp3.internal.framed.Huffman:
+    91:114:void encode(byte[],java.io.OutputStream)
+    117:124:int encodedLength(byte[])
+okhttp3.internal.framed.Settings:
+    static final int DEFAULT_INITIAL_WINDOW_SIZE
+    static final int FLAG_CLEAR_PREVIOUSLY_PERSISTED_SETTINGS
+    static final int PERSIST_VALUE
+    static final int PERSISTED
+    static final int UPLOAD_BANDWIDTH
+    static final int HEADER_TABLE_SIZE
+    static final int DOWNLOAD_BANDWIDTH
+    static final int ENABLE_PUSH
+    static final int ROUND_TRIP_TIME
+    static final int MAX_CONCURRENT_STREAMS
+    static final int CURRENT_CWND
+    static final int MAX_FRAME_SIZE
+    static final int DOWNLOAD_RETRANS_RATE
+    static final int MAX_HEADER_LIST_SIZE
+    static final int INITIAL_WINDOW_SIZE
+    static final int CLIENT_CERTIFICATE_VECTOR_SIZE
+    static final int FLOW_CONTROL_OPTIONS
+    static final int COUNT
+    static final int FLOW_CONTROL_OPTIONS_DISABLED
+    137:138:int getUploadBandwidth(int)
+    149:150:int getDownloadBandwidth(int)
+    156:157:boolean getEnablePush(boolean)
+    162:163:int getRoundTripTime(int)
+    174:175:int getCurrentCwnd(int)
+    186:187:int getDownloadRetransRate(int)
+    192:193:int getMaxHeaderListSize(int)
+    203:204:int getClientCertificateVectorSize(int)
+    209:211:boolean isFlowControlDisabled()
+okhttp3.internal.framed.Spdy3:
+    static final int TYPE_DATA
+    static final int TYPE_SYN_STREAM
+    static final int TYPE_SYN_REPLY
+    static final int TYPE_RST_STREAM
+    static final int TYPE_SETTINGS
+    static final int TYPE_PING
+    static final int TYPE_GOAWAY
+    static final int TYPE_HEADERS
+    static final int TYPE_WINDOW_UPDATE
+    static final int FLAG_FIN
+    static final int FLAG_UNIDIRECTIONAL
+    static final int VERSION
+okhttp3.internal.http.Http1xStream:
+    private static final int STATE_IDLE
+    private static final int STATE_OPEN_REQUEST_BODY
+    private static final int STATE_WRITING_REQUEST_BODY
+    private static final int STATE_READ_RESPONSE_HEADERS
+    private static final int STATE_OPEN_RESPONSE_BODY
+    private static final int STATE_READING_RESPONSE_BODY
+    private static final int STATE_CLOSED
+okhttp3.internal.http.Http1xStream$ChunkedSource:
+    private static final long NO_CHUNK_YET
+okhttp3.internal.http.HttpDate:
+    public static final long MAX_DATE
+    117:118:private HttpDate()
+okhttp3.internal.http.HttpHeaders:
+    38:39:private HttpHeaders()
+okhttp3.internal.http.HttpMethod:
+    49:50:private HttpMethod()
+okhttp3.internal.http.HttpStream:
+    public static final int DISCARD_STREAM_TIMEOUT_MILLIS
+okhttp3.internal.http.RequestLine:
+    24:25:private RequestLine()
+okhttp3.internal.http.RetryAndFollowUpInterceptor:
+    private static final int MAX_FOLLOW_UPS
+okhttp3.internal.http.StatusLine:
+    public static final int HTTP_TEMP_REDIRECT
+    public static final int HTTP_PERM_REDIRECT
+    public static final int HTTP_CONTINUE
+okhttp3.internal.platform.AndroidPlatform:
+    private static final int MAX_LOG_LENGTH
+okhttp3.internal.platform.Platform:
+    public static final int INFO
+    public static final int WARN
+okhttp3.internal.tls.BasicCertificateChainCleaner:
+    private static final int MAX_SIGNERS
+okhttp3.internal.tls.OkHostnameVerifier:
+    private static final int ALT_DNS_NAME
+    private static final int ALT_IPA_NAME
+okio.AsyncTimeout:
+    private static final int TIMEOUT_WRITE_SIZE
+okio.Base64:
+    26:27:private Base64()
+okio.Buffer:
+    static final int REPLACEMENT_CHARACTER
+    1514:1520:java.util.List segmentSizes()
+okio.ByteString:
     private static final long serialVersionUID
-com.google.android.vending.licensing.util.Base64:
-    public static final boolean ENCODE
-    public static final boolean DECODE
-    private static final byte EQUALS_SIGN
-    private static final byte NEW_LINE
-    private static final byte WHITE_SPACE_ENC
-    private static final byte EQUALS_SIGN_ENC
-com.google.android.vending.licensing.util.Base64DecoderException:
-    private static final long serialVersionUID
+    484:495:private void readObject(java.io.ObjectInputStream)
+    498:500:private void writeObject(java.io.ObjectOutputStream)
+okio.GzipSink
+okio.GzipSource:
+    private static final byte FHCRC
+    private static final byte FEXTRA
+    private static final byte FNAME
+    private static final byte FCOMMENT
+    private static final byte SECTION_HEADER
+    private static final byte SECTION_BODY
+    private static final byte SECTION_TRAILER
+    private static final byte SECTION_DONE
+okio.HashingSink
+okio.HashingSource
+okio.Pipe
+okio.Pipe$PipeSink
+okio.Pipe$PipeSource
+okio.Segment:
+    static final int SIZE
+    static final int SHARE_MINIMUM
+okio.SegmentPool:
+    static final long MAX_SIZE
+okio.SegmentedByteString:
+    288:288:private java.lang.Object writeReplace()
+okio.Util:
+    24:25:private Util()

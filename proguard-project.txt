@@ -23,6 +23,7 @@
 -libraryjars 'libs/guice-2.0-no_aop.jar'
 -libraryjars 'libs/libGoogleAnalyticsV2.jar'
 -libraryjars 'libs/roboguice-2.0.jar'
+-libraryjars 'libs/okhttp-3.4.1.jar'
 
 -optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
 -optimizationpasses 5
@@ -117,3 +118,10 @@
 -keep class * extends android.os.Parcelable {
     public static final android.os.Parcelable$Creator *;
 }
+
+# OkHttp
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class com.squareup.okhttp.** { *; }
+-keep interface com.squareup.okhttp.** { *; }
+-dontwarn com.squareup.okhttp.**
